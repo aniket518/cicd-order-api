@@ -33,19 +33,19 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
-
 					<cloudHub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<environment>${environment}</environment>
 						<applicationName>${app.name}</applicationName>
+						<environment>${environment}</environment>
+						<businessGroupId>${anypoint.businessGroupId}</businessGroupId>
+						<runtimeVersion>4.9.11</runtimeVersion>
+						<region>us-east-1</region>
+						<replicas>1</replicas>
+						<vCores>0.1</vCores>
 						<connectedApp>
 							<clientId>${anypoint.clientId}</clientId>
 							<clientSecret>${anypoint.clientSecret}</clientSecret>
 						</connectedApp>
-						<runtimeVersion>4.9.11</runtimeVersion>
-						<region>us-east-1</region>
-						<workers>1</workers>
-						<workerType>MICRO</workerType>
 					</cloudHub2Deployment>
 				</configuration>
 			</plugin>
