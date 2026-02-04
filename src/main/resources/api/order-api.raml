@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: order-api
+version: 1.0.0
+documentation:
+  - title: order API
+    content: contains only one endpoint having one method only
+
+/orders/{orderID}:
+  uriParameters:
+    orderID:
+      type: string
+
+  get:
+    description: Get order details by order ID
+    responses:
+      200:
+        body:
+          application/json:
+            example: 
+              {
+                "orderID":"101",
+                "customerName":"ABCD",
+                "price":"1000"
+              }
