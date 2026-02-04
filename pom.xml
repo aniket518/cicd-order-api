@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
@@ -29,6 +31,23 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+					<classifier>mule-application</classifier>
+
+					<cloudHub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<environment>${environment}</environment>
+						<applicationName>${app.name}</applicationName>
+						<connectedApp>
+							<clientId>${anypoint.clientId}</clientId>
+							<clientSecret>${anypoint.clientSecret}</clientSecret>
+						</connectedApp>
+						<runtimeVersion>4.9.11</runtimeVersion>
+						<region>us-east-1</region>
+						<workers>1</workers>
+						<workerType>MICRO</workerType>
+					</cloudHub2Deployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
