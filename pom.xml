@@ -28,15 +28,14 @@
 					<classifier>mule-application</classifier>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
 						<applicationName>${app.name}</applicationName>
 						<environment>${environment}</environment>
-						<businessGroupId>${project.groupId}</businessGroupId>
+						<target>Cloudhub-US-East-2</target>
+						<muleVersion>4.9.11</muleVersion>
+						<server>Repository</server>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
-						<connectedApp>
-							<clientId>${anypoint.clientId}</clientId>
-							<clientSecret>${anypoint.clientSecret}</clientSecret>
-						</connectedApp>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
