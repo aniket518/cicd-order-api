@@ -49,20 +49,6 @@
 					</cloudHub2Deployment>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>exchange-mule-maven-plugin</artifactId>
-				<version>0.1.4</version>
-				<executions>
-					<execution>
-						<id>exchange-pre-deploy</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>exchange-pre-deploy</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
