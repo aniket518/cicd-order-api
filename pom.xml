@@ -31,7 +31,6 @@
 						<applicationName>${app.name}</applicationName>
 						<environment>${environment}</environment>
 						<businessGroupId>${project.groupId}</businessGroupId>
-						<region>us-east-1</region>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 						<connectedApp>
