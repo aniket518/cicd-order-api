@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>c0b62f5a-bdbc-4fd8-a3cd-5ecf9122e546</groupId>
 	<artifactId>order-app</artifactId>
 	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
-
 	<name>order-app</name>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<app.runtime>4.9.11</app.runtime>
 		<mule.maven.plugin.version>4.6.1</mule.maven.plugin.version>
 	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -33,7 +26,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
-					<cloudHub2Deployment>
+					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<applicationName>${app.name}</applicationName>
 						<environment>${environment}</environment>
@@ -46,12 +39,11 @@
 							<clientId>${anypoint.clientId}</clientId>
 							<clientSecret>${anypoint.clientSecret}</clientSecret>
 						</connectedApp>
-					</cloudHub2Deployment>
+					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
@@ -72,10 +64,9 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
-
 	<repositories>
 		<repository>
-			<id>Repository</id>
+			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
@@ -87,13 +78,12 @@
 			<layout>default</layout>
 		</repository>
 		<repository>
-			<id>PrivateExchangeRepository</id>
+			<id>Repository</id>
 			<name>Private Exchange repository</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
 			<layout>default</layout>
 		</repository>
 	</repositories>
-
 	<pluginRepositories>
 		<pluginRepository>
 			<id>mulesoft-releases</id>
@@ -105,7 +95,6 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
 	<distributionManagement>
 		<repository>
 			<id>Repository</id>
@@ -114,5 +103,4 @@
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
-
 </project>
